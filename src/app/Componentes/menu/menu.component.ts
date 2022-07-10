@@ -1,4 +1,4 @@
-import { KeycloakService } from './../../Servicios/keycloak.service';
+import { KeycloakService } from '../../Core/Servicios/keycloak.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
