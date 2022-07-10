@@ -1,8 +1,8 @@
 export const environment = {
   production: false,
-  foo_api: 'http://localhost:8080/foo/',
+  peliculas_api: 'http://localhost:80/peliculas/',
   authResourceServerConfig: {
-    allowedUrls: ['http://localhost:8080/foo'],
+    allowedUrls: ['http://localhost:8080/peliculas'],
     sendAccessToken: true,
   },
   authConfig: {
