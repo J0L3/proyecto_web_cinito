@@ -1,8 +1,8 @@
 <nav
   class="navbar navbar-expand-sm navbar-light"
-  style="background-color: #6a7dd4"
+  style="background-color: #c0ccff"
 >
-  <a class="navbar-brand" href="#">Cinito</a>
+  <a class="navbar-brand" href="/">Cinito</a>
   <button
     class="navbar-toggler d-lg-none"
     type="button"
@@ -14,17 +14,28 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="menu">
     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Inicio</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/peliculas">Peliculas</a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
     </ul>
+
     <div *ngIf="isLogged()">
       <button class="btn btn-outline-danger" (click)="logout()">
         Cerrar sesión
       </button>
     </div>
+
     <div *ngIf="!isLogged()">
       <button class="btn btn-outline-success" (click)="login()">
         Iniciar sesión

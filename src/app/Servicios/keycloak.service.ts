@@ -48,8 +48,6 @@ export class KeycloakService {
 
   public login(): void {
     this.oauthService.initImplicitFlowInternal();
-    //this.oauthService.initCodeFlow();
-    //this.oauthService.initLoginFlow();
   }
 
   public logout(): void {

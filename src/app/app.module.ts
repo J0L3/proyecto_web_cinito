@@ -8,9 +8,12 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { ListComponent } from './Componentes/peliculas/list/list.component';
+import { DetailComponent } from './Componentes/peliculas/detail/detail.component';
+import { FooterComponent } from './Componentes/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HomeComponent],
+  declarations: [AppComponent, MenuComponent, HomeComponent, ListComponent, DetailComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
