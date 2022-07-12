@@ -1,1 +1,22 @@
-<p>list works!</p>
+<table class="table table-dark text-center">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Resumen</th>
+      <th scope="col">Duracion</th>
+      <th scope="col">Productora</th>
+      <th scope="col">Sala</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of peliculas">
+      <th>{{ pelicula.id_pelicula }}</th>
+      <th>{{ pelicula.titulo }}</th>
+      <th>{{ pelicula.resumen }}</th>
+      <th>{{ pelicula.duracion }}</th>
+      <th>{{ pelicula.productora }}</th>
+      <th>{{ pelicula.id_sala }}</th>
+    </tr>
+  </tbody>
+</table>

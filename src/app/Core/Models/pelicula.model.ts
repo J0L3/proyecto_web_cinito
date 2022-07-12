@@ -1,24 +1,24 @@
-export class Pelicula {
-  idPelicula: string;
+export class ModeloPelicula {
+  id_pelicula: string;
   titulo: string;
   resumen: string;
   duracion: number;
   productora: string;
-  idSala: number;
+  id_sala: number;
 
   constructor(
-    idPelicula: string,
+    id_pelicula: string,
     titulo: string,
     resumen: string,
     duracion: number,
     productora: string,
-    idSala: number
+    id_sala: number
   ) {
-    this.idPelicula = idPelicula;
+    this.id_pelicula = id_pelicula;
     this.titulo = titulo;
     this.resumen = resumen;
     this.duracion = duracion;
     this.productora = productora;
-    this.idSala = idSala;
+    this.id_sala = id_sala;
   }
 }

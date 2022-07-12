@@ -1,8 +1,8 @@
 export const environment = {
   production: false,
-  peliculas_api: 'http://localhost:80/peliculas/',
+  peliculas_api: 'http://localhost/php/cinito_backend/peliculas/',
   authResourceServerConfig: {
-    allowedUrls: ['http://localhost:8080/peliculas'],
+    allowedUrls: ['http://localhost/php/cinito_backend/peliculas/'],
     sendAccessToken: true,
   },
   authConfig: {

@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Pelicula } from '../Models/pelicula.model';
+import { ModeloPelicula } from '../Models/pelicula.model';
 
 @Injectable({
   providedIn: 'root',
@@ -11,28 +11,30 @@ export class PeliculasService {
   peliculasURL = environment.peliculas_api;
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
   };
 
   constructor(private httpClient: HttpClient) {
     console.log('PeliculasService');
   }
 
-  public list(): Observable<Pelicula[]> {
-    return this.httpClient.get<Pelicula[]>(
-      this.peliculasURL + 'list',
+  public list(): Observable<ModeloPelicula[]> {
+    return this.httpClient.get<ModeloPelicula[]>(
+      this.peliculasURL + 'getall.php',
       this.httpOptions
     );
   }
 
-  public detail(idPelicula: string): Observable<Pelicula> {
-    return this.httpClient.get<Pelicula>(
-      this.peliculasURL + `detail/${idPelicula}`,
+  public detail(id_pelicula: string): Observable<ModeloPelicula> {
+    return this.httpClient.get<ModeloPelicula>(
+      this.peliculasURL + `detail/${id_pelicula}`,
       this.httpOptions
     );
   }
 
-  public insert(Peliculas: Pelicula): Observable<any> {
+  public insert(Peliculas: ModeloPelicula): Observable<any> {
     return this.httpClient.post<any>(
       this.peliculasURL + 'insert',
       Peliculas,
@@ -40,17 +42,20 @@ export class PeliculasService {
     );
   }
 
-  public update(idPelicula: string, Peliculas: Pelicula): Observable<any> {
+  public update(
+    id_pelicula: string,
+    Peliculas: ModeloPelicula
+  ): Observable<any> {
     return this.httpClient.put<any>(
-      this.peliculasURL + `update/${idPelicula}`,
+      this.peliculasURL + `update/${id_pelicula}`,
       Peliculas,
       this.httpOptions
     );
   }
 
-  public delete(id: number): Observable<any> {
+  public delete(id_pelicula: string): Observable<any> {
     return this.httpClient.delete<any>(
-      this.peliculasURL + `delete/${id}`,
+      this.peliculasURL + `delete/${id_pelicula}`,
       this.httpOptions
     );
   }
